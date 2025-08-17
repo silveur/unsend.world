@@ -62,7 +62,8 @@
 }
 
 .logo {
-  border-radius: 50%;
+  width: 90%;
+  /* height: auto; */
   object-fit: cover;
   /* box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3); */
   position: relative;
@@ -127,7 +128,7 @@
 
 .enterButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  /* box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); */
   background: #f8f8f8;
 }
 
@@ -234,7 +235,7 @@
 
 .submitButton:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+  /* box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4); */
   background: #ff5722;
 }
 

@@ -69,14 +69,7 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.landing}>
           <div className={styles.logoContainer}>
-            <Image
-              src="/logo.jpeg"
-              alt="Logo"
-              width={600}
-              height={100}
-              className={styles.logo}
-              priority
-            />
+            <img src="/logo.jpeg" alt="Logo" className={styles.logo} />
           </div>
         </div>
 
