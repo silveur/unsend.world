@@ -136,7 +136,7 @@ export default function Home() {
 
             {submitStatus === "success" && (
               <p className={styles.successMessage}>
-                Thank you for subscribing!
+                Thank you for registering!
               </p>
             )}
 
