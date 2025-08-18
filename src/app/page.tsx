@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
+import Link from "next/link";
 
 export default function Home() {
   const [errorMessage, setErrorMessage] = useState("");
@@ -69,93 +70,20 @@ export default function Home() {
       <main className={styles.main}>
         <div className={styles.landing}>
           <div className={styles.logoContainer}>
-            <img src="/logo.jpeg" alt="Logo" className={styles.logo} />
+            <img src="/bannernew.svg" alt="Logo" className={styles.logo} />
           </div>
         </div>
 
-        {!showForm ? (
-          // Step 1: Landing page with Enter button
-          <div className={styles.buttonContainer}>
-            <button className={styles.enterButton} onClick={handleEnter}>
-              Enter
+        <div className={styles.buttonContainer}>
+          <Link href="/subscribe">
+            <button
+              className={`${styles.enterButton} button`}
+              onClick={handleEnter}
+            >
+              register
             </button>
-          </div>
-        ) : (
-          // Step 2: Form page
-          <div className={styles.formContainer}>
-            <form onSubmit={handleSubmit} className={styles.form}>
-              <div className={styles.formRow}>
-                <div className={styles.formGroup}>
-                  <label htmlFor="firstName" className={styles.label}>
-                    First Name
-                  </label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    value={formData.firstName}
-                    onChange={handleInputChange}
-                    required
-                    className={styles.input}
-                    placeholder="Enter your first name"
-                  />
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label htmlFor="lastName" className={styles.label}>
-                    Last Name
-                  </label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={handleInputChange}
-                    required
-                    className={styles.input}
-                    placeholder="Enter your last name"
-                  />
-                </div>
-              </div>
-
-              <div className={styles.formGroup}>
-                <label htmlFor="email" className={styles.label}>
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  className={styles.input}
-                  placeholder="Enter your email address"
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className={styles.submitButton}
-              >
-                {isSubmitting ? "Subscribing..." : "Subscribe"}
-              </button>
-
-              {submitStatus === "success" && (
-                <p className={styles.successMessage}>
-                  Thank you for subscribing! Please check your email to confirm.
-                </p>
-              )}
-
-              {submitStatus === "error" && (
-                <p className={styles.errorMessage}>
-                  {errorMessage || "Something went wrong. Please try again."}
-                </p>
-              )}
-            </form>
-          </div>
-        )}
+          </Link>
+        </div>
       </main>
     </div>
   );

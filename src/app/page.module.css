@@ -1,11 +1,11 @@
 .page {
   --dark-brown: #624012;
-  --orange: #ff6b35;
+  --orange: #fe5100;
   --white: #ffffff;
   --black: #000000;
   --gray: #666666;
   --light-gray: #e1e5e9;
-  --success-color: #28a745;
+  --success-color: #ff79ae;
   --error-color: #dc3545;
 
   display: flex;
@@ -13,7 +13,7 @@
   justify-content: center;
   min-height: 100vh;
   padding: 20px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--font-brow-pro), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   background: var(--dark-brown);
   color: var(--white);
   position: relative;
@@ -109,17 +109,21 @@
   font-weight: 700;
 }
 
+button.button {
+  font-family: var(--font-brow-pro), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
 .enterButton {
-  background: var(--white);
-  color: var(--black);
+  background: var(--orange);
+  color: var(--dark-brown);
   border: none;
-  padding: 12px 20px;
-  border-radius: 5px;
+  padding: 5px 10px;
+  border-radius: 1px;
   /* font-size: 1.2rem; */
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   letter-spacing: 1px;
   /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); */
   position: relative;
@@ -142,7 +146,7 @@
 }
 
 .formContainer .logoContainer {
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
 
 .formContainer .logo {
@@ -246,11 +250,8 @@
 }
 
 .successMessage {
-  background: rgba(40, 167, 69, 0.2);
-  color: var(--success-color);
+  color: var(--orange);
   padding: 12px 16px;
-  border-radius: 8px;
-  border: 1px solid rgba(40, 167, 69, 0.3);
   text-align: center;
   font-weight: 500;
 }
@@ -303,10 +304,10 @@
     font-size: 1rem;
   }
 
-  .enterButton {
+  /* .enterButton {
     padding: 14px 36px;
     font-size: 1.1rem;
-  }
+  } */
 }
 
 /* Animation for page transitions */
