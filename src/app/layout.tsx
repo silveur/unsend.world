@@ -11,6 +11,9 @@ const browPro = localFont({
 export const metadata: Metadata = {
   title: "un:send",
   description: "un:send festival 2025/2026",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
