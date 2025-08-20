@@ -159,7 +159,6 @@ button.button {
   text-align: center;
   margin: 0 0 8px 0;
   color: var(--orange);
-  text-transform: uppercase;
   letter-spacing: 2px;
 }
 
@@ -195,7 +194,7 @@ button.button {
   font-weight: 600;
   color: var(--orange);
   margin-bottom: 4px;
-  text-transform: uppercase;
+  text-transform: lowercase;
   letter-spacing: 1px;
 }
 
@@ -232,7 +231,7 @@ button.button {
   cursor: pointer;
   transition: all 0.2s ease;
   margin-top: 8px;
-  text-transform: uppercase;
+  text-transform: lowercase;
   letter-spacing: 1px;
 }
 

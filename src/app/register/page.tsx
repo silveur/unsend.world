@@ -89,7 +89,6 @@ export default function Home() {
                   onChange={handleInputChange}
                   required
                   className={styles.input}
-                  placeholder="Enter your first name"
                 />
               </div>
 
@@ -105,7 +104,6 @@ export default function Home() {
                   onChange={handleInputChange}
                   required
                   className={styles.input}
-                  placeholder="Enter your last name"
                 />
               </div>
             </div>
@@ -122,7 +120,6 @@ export default function Home() {
                 onChange={handleInputChange}
                 required
                 className={styles.input}
-                placeholder="Enter your email address"
               />
             </div>
 
@@ -136,7 +133,7 @@ export default function Home() {
 
             {submitStatus === "success" && (
               <p className={styles.successMessage}>
-                Thank you for registering!
+                {"Thanks, you'll hear from us soon :)"}
               </p>
             )}
 
